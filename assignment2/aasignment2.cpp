@@ -1,3 +1,8 @@
+/*
+Implement stack as an abstract data type using singly linked list and use this ADT for conversion of
+infix expression to postfix, prefix and evaluation of postfix and prefix expression
+*/
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -305,7 +310,6 @@ int main()
                     << endl;
             }
             break;
-
         default:
             cout << "incorrect\n";
             break;

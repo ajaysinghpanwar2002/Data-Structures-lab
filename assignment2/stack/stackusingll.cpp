@@ -38,7 +38,6 @@ int pop(StackNode** root)
 	*root = (*root)->next;
 	int popped = temp->data;
 	free(temp);
-
 	return popped;
 }
 
@@ -53,7 +52,6 @@ int peek(StackNode* root)
 int main()
 {
 	StackNode* root = NULL;
-
 	push(&root, 10);
 	push(&root, 20);
 	push(&root, 30);
@@ -69,7 +67,6 @@ int main()
 		// remove top element in stack
 		pop(&root);
 	}
-
 	return 0;
 }
 
