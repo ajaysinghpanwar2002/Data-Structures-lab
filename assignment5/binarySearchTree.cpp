@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#define nl "\n"
 
 // node structure
 struct Node
@@ -104,28 +105,72 @@ void inorder(Node *root)
     cout << root->data << " ";
     inorder(root->right);
 }
-
-int main()
+// Display - Depth of tree
+int depth(Node *root)
 {
-    Node *root = NULL;
-    root = insertBst(root, 5);
-    insertBst(root, 1);
-    insertBst(root, 3);
-    insertBst(root, 4);
-    insertBst(root, 7);
-    if (searchBst(root, 5) == NULL)
-    {
-        cout << "key does not exist";
-    }
-    else
-    {
-        cout << "key exists";
-    }
-    // print inorder
-    inorder(root);
-    cout << endl;
+    if(root == NULL) return 0;
+    int lh = depth(root->left);
 
-    root = deleteBst(root, 5);
-    inorder(root);
+}
+int main()
+{   
+    // Node *root = NULL;
+    // root = insertBst(root, 5);
+    // insertBst(root, 1);
+    // insertBst(root, 3);
+    // insertBst(root, 4);
+    // insertBst(root, 7);
+    // if (searchBst(root, 5) == NULL)
+    // {
+    //     cout << "key does not exist";
+    // }
+    // else
+    // {
+    //     cout << "key exists";
+    // }
+    // // print inorder
+    // inorder(root);
+    // cout << endl;
+
+    // root = deleteBst(root, 5);
+    // inorder(root);
+
+    int op = 1;
+    Node *root = NULL;
+    int n, arr[n];
+    switch (op)
+        while (op =! 0)
+        {
+            cout << "\nChoose the operation you want to perform: " << nl;
+            cout << "1. Insertion " << nl;
+            cout << "2. Delete " << nl;
+            cout << "3. Search " << nl;
+            cout << "4. Display tree (Traversal) " << nl;
+            cout << "5. Display - Depth of tree " << nl;
+            cout << "6. Display - Mirror image " << nl;
+            cout << "7. Create a copy " << nl;
+            cout << "8. Display all parent nodes with their child nodes " << nl;
+            cout << "9. Display leaf nodes " << nl;
+            cout << "10. Display tree level wise " << nl;
+            cout << "*. Press any other numeric key to exit" << nl;
+            cin >> op;
+            {
+            case 1:
+                cout << "enter the elements you want to insert in a tree" << endl;
+                cin >> n;
+                for (int i = 0; i < n; i++)
+                {   
+                    cin >> arr[i];
+                }
+                root = insertBst(root, arr[n]);
+                break;
+            case 2:
+                /* code */
+                break;
+            default:
+                op = 0;
+                break;
+            }
+        }
     return 0;
 }

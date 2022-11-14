@@ -58,7 +58,6 @@ void display(int arr[], int n, int f, int r)
         while (f != r)
         {
             cout << arr[f] << " ";
-
             f = (f + 1) % n;
         }
         cout << arr[f] << endl;
