@@ -13,7 +13,7 @@ public:
         next = NULL;
     }
 };
-void insertAtTail(node *&head, int val)
+void insertAtTail(node *head, int val)
 {
     node *n = new node(val);
     if (head == NULL)
@@ -28,7 +28,7 @@ void insertAtTail(node *&head, int val)
     }
     temp->next = n;
 }
-void insertAtHead(node *&head, int val)
+void insertAtHead(node *head, int val)
 {
     node *n = new node(val);
     n->next = head;
@@ -57,7 +57,14 @@ void display(node *head)
     }
     cout << "NULL" << endl;
 }
-void deletion(node *&head, int val)
+void deleteAtHead(node *head)
+{
+    node *todelete = head;
+    head = head->next;
+
+    delete todelete;
+}
+void deletion(node *head, int val)
 {
     if (head == NULL)
     {
@@ -78,13 +85,6 @@ void deletion(node *&head, int val)
 
     delete todelete;
 }
-void deleteAtHead(node *&head)
-{
-    node *todelete = head;
-    head = head->next;
-
-    delete todelete;
-}
 int main()
 {
     node *head = NULL;
@@ -98,3 +98,32 @@ int main()
     deletion(head, 3);
     return 0;
 }
+
+/**
+ * @brief Value, Address, Reference 
+ * Variable, Pointer, Reference Variable
+ * "0xff", 0xff, 0xff * 
+ */
+// .h
+// extern int i;
+// int i;
+// int i = 10;
+// HLL, Assembly Code, Machine Code, Executable Binary
+// Compilation, Assemble, Linking
+// .o, 
+// Table (Symbol Table)
+
+// Example 1
+// int i = 1; // Value Variable
+// int& j = i; // Reference Variable
+// int* k = &i; // Pointer Variable
+
+// Symbol Table
+/**
+ * j, i: 0xff
+ * k: 0xf2
+ */
+
+// Pointer Arithematic
+// ++
+
