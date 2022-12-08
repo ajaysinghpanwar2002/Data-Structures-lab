@@ -51,7 +51,7 @@ Node *searchBst(Node *root, int key)
     }
     // data < key
     return searchBst(root->right, key);
-}
+}  
 // inordersuccessor
 Node *inorderSucc(Node *root)
 {
@@ -110,7 +110,6 @@ int depth(Node *root)
 {
     if(root == NULL) return 0;
     int lh = depth(root->left);
-
 }
 int main()
 {   

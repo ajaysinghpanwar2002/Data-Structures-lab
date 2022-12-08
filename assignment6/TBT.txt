@@ -1,0 +1,14 @@
+6. Threaded Binary Tree -- CO1, CO2, CO3, CO5
+
+Implement In-order Threaded Binary Tree and traverse it in In-order and Pre-order
+
+steps to convert
+1) keep the leftmost and rightmost Null pointers as null 
+2) change all others NULL pointers as 
+
+left nullpointer = Inorder Predecessor
+right nullpointer = Inorder successor
+
+3) we'll add flags 
+flag == 1 means child is present 
+flag == 0 means pointing to ancestor, no child is present
