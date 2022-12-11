@@ -74,7 +74,6 @@ int find(int x, int parent[]){
     return parent[x];
 }
 
-
 void Kruskal(int v){
     int parent[v];
     for(int i = 0;i < v; i++) parent[i] = i;
@@ -111,7 +110,6 @@ void Kruskal(int v){
     cout<<"Minimum Cost of Edges : "<<sum<<nl;
 }
 
-
 int main(){
     int v = 0, op = 0, op1 = 1, op2 = 0, src = 0, dest = 0, weight = 0;
 
@@ -124,7 +122,6 @@ int main(){
         cout<<"*. Press any other numeric key to exit\n";
 
         cin>>op;
-
         switch(op){
             case 1:
                 cout<<"Enter the number of vertices in the graph : ";
@@ -135,7 +132,6 @@ int main(){
                         cost[i][j]=inf;
                     }
                 }
-
                 while(op1!=0){
                     cout<<"1. Add Edges"<<nl;
                     cout<<"2. Delete Edge"<<nl;
