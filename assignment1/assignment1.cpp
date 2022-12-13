@@ -25,7 +25,7 @@ public:
              << "\t" << sgpa << "\t"
              << "\t" << name << endl;
     }
-    // time complexity O(logn)
+    // time complexity O(n)
     void linearSearch(student s1[], int n, float sg)
     {
         int i = 0, flag = 0;
@@ -41,7 +41,7 @@ public:
         if (!flag)
             cout << "NOT FOUND!\n";
     }
-    // time complexity O(n)
+    // time complexity O(logn)
     void binarySearch(student s1[], string keys, int n)
     {
         student ss;
